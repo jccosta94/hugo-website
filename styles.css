@@ -962,17 +962,25 @@ h3 {
     padding: 64px 18px;
   }
 
-  /* Hero — flow the avatar into the document instead of hiding it */
+  /* Hero — stack vertically and flow the avatar into the document instead of hiding it */
   .hero {
+    flex-direction: column;
+    align-items: stretch;
     padding-top: 84px;
     padding-bottom: 48px;
     min-height: auto;
   }
 
+  .hero::after {
+    display: none;
+  }
+
   .hero-scene {
     position: static;
     inset: auto;
-    margin-bottom: 24px;
+    width: 100%;
+    margin-bottom: 12px;
+    order: -1;
   }
 
   .halo-grid {
